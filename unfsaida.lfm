@@ -3283,14 +3283,18 @@ object frmNFSaida: TfrmNFSaida
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsNota
     Left = 192
     Top = 432
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryItensid: TLongintField
       DisplayWidth = 10
@@ -3300,7 +3304,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryItensnfsaida: TLongintField
       DisplayWidth = 10
@@ -3310,7 +3314,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryItensproduto: TLongintField
       DisplayWidth = 10
@@ -3760,13 +3764,17 @@ object frmNFSaida: TfrmNFSaida
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     Left = 120
     Top = 432
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryNotaid: TLongintField
       DisplayWidth = 10
@@ -3776,7 +3784,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryNotanumeroctlform: TLongintField
       DisplayWidth = 10
@@ -3806,7 +3814,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 4
     end
     object qryNotanatureza: TStringField
@@ -4376,7 +4384,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       DisplayFormat = ',0.00'
       Precision = 655362
     end
@@ -4388,7 +4396,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       DisplayFormat = ',0.00'
       Precision = 655362
     end
@@ -4400,7 +4408,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Precision = 655362
     end
     object qryNotatipo_nota: TLongintField
@@ -4411,7 +4419,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryNotastatus_nfe: TLongintField
       DisplayWidth = 10
@@ -4421,7 +4429,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryNotacadastro_dest: TStringField
       FieldKind = fkData
@@ -4430,7 +4438,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 4
     end
     object qryNotanumero_pedio_online: TLongintField
@@ -4469,7 +4477,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       DisplayValues = 'True;False'
     end
     object qryNotadevolucao_destacar_icms: TBooleanField
@@ -4479,7 +4487,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       DisplayValues = 'True;False'
     end
     object qryNotacrt: TLongintField
@@ -4501,14 +4509,18 @@ object frmNFSaida: TfrmNFSaida
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsNota
     Left = 440
     Top = 432
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryCtaReceberid: TLongintField
       DisplayWidth = 10
@@ -4518,7 +4530,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryCtaReceberid_nf: TLongintField
       DisplayWidth = 10
@@ -4716,7 +4728,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 28
     end
   end
@@ -4734,13 +4746,17 @@ object frmNFSaida: TfrmNFSaida
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'itensentrada'
+        ParamType = ptUnknown
       end>
     Left = 360
     Top = 432
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'itensentrada'
+        ParamType = ptUnknown
       end>
     object qryLotesItensid: TLongintField
       DisplayWidth = 10
@@ -4844,7 +4860,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryListaNotasnumeroctlform: TLongintField
       DisplayWidth = 10
@@ -4874,7 +4890,7 @@ object frmNFSaida: TfrmNFSaida
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 4
     end
     object qryListaNotasnatureza: TStringField
@@ -5659,133 +5675,219 @@ object frmNFSaida: TfrmNFSaida
     Top = 432
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'nfsaida'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'produto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'descricao'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'quantidade'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'unidade'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cst'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'ncm'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'origem'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'valorunitario'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'valortotal'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'picms'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'lote'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'pdesconto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'pmva'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'predst'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'baseicms'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vlricms'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'basesubst'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vlrsubst'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'pcomissao'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'picmsst'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'redbase'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'peso'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cfop'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'modbc'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'modbcst'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cst_pis'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'ppis'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vbc_pis'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cst_cofins'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'pcofins'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vbc_cofins'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'infadprod'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'estoque_origem'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'pipi'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vbc_ipi'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cst_ipi'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vfrete'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'voutras'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'indtot'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vlr_flex'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'OLD_id'
+        ParamType = ptUnknown
       end>
   end
   object updNota: TZUpdateSQL
@@ -5895,199 +5997,329 @@ object frmNFSaida: TfrmNFSaida
     Top = 496
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'numeroctlform'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'serie'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'entradasaida'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'natureza'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'inscrestsubtrib'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'dataemissao'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'datasaida'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'horasaida'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'codcliente'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'destinatario'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cnpjcpf'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'endereco'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cidade'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'bairro'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cep'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'complemento'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'uf'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'telefone'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'inscrestadual'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'forma_pgto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'prazo_pgto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'baseicms'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'valoricms'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'baseicmssub'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'valoricmssub'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'valortotalprodutos'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'valorfrete'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'valorseguro'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'valoroutradesp'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'valoripi'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'valortotalnota'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'nometransp'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'freteconta'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'placaveiculo'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'ufveiculo'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cnpjtransp'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'endtransp'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cidadetransp'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'uftransp'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'ietransp'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'quantvolumes'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'especievol'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'marcavol'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'numerovol'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'pesobrutovol'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'pesoliquidovol'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'dadosadicionais'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'impressa'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cancelada'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'motivo_erro'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'numero_recibo'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'chave_nfe'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vendedor'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vcofins'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vpis'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'desconto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'tipo_nota'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'status_nfe'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cadastro_dest'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'numero_pedio_online'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'numero_ped_cliente'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'devolucao_st_ipi_outras_desp'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'devolucao_destacar_icms'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'OLD_id'
+        ParamType = ptUnknown
       end>
   end
   object qryNFReferencia: TZReadOnlyQuery
@@ -6110,14 +6342,18 @@ object frmNFSaida: TfrmNFSaida
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsNota
     Left = 560
     Top = 528
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
   end
   object dsNFReferencia: TDataSource

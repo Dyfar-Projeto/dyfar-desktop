@@ -93,6 +93,7 @@ object frmCadProdutos: TfrmCadProdutos
           ButtonWidth = 23
           CancelCaption = 'Cancel'
           DialogTitle = 'Select a Date'
+          Enabled = False
           Glyph.Data = {
             36010000424D360100000000000076000000280000001C0000000C0000000100
             040000000000C000000000000000000000000000000000000000000000000000
@@ -194,7 +195,7 @@ object frmCadProdutos: TfrmCadProdutos
             TabOrder = 0
           end
           object btSelUnidade: TSpeedButton
-            Left = 230
+            Left = 232
             Height = 22
             Top = 34
             Width = 23
@@ -4306,14 +4307,13 @@ object frmCadProdutos: TfrmCadProdutos
     end
   end
   object qryProdutos: TZQuery
-    AfterOpen = qryProdutosAfterOpen
     Connection = dbConnect.ZConnection1
+    AfterOpen = qryProdutosAfterOpen
+    UpdateObject = updProdutos
     BeforePost = qryProdutosBeforePost
     AfterPost = qryProdutosAfterPost
     BeforeDelete = qryProdutosBeforeDelete
     OnNewRecord = qryProdutosNewRecord
-    UpdateObject = updProdutos
-    Active = True
     SQL.Strings = (
       'Select p.id, descricao, codigo_barras, data_cadastro, grupo_produto, unidade, '
       '       margem_lucro_varejo, preco_venda_varejo, observacao, '
@@ -4339,19 +4339,27 @@ object frmCadProdutos: TfrmCadProdutos
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'empLocal'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     Left = 32
     Top = 448
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'empLocal'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryProdutosid: TLongintField
       FieldKind = fkData
@@ -4360,7 +4368,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryProdutosdescricao: TStringField
       FieldKind = fkData
@@ -4708,7 +4716,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       DisplayValues = 'True;False'
     end
     object qryProdutoscaderno: TBooleanField
@@ -4719,7 +4727,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       DisplayValues = 'Sim;Não'
     end
     object qryProdutoscest: TStringField
@@ -5055,169 +5063,279 @@ object frmCadProdutos: TfrmCadProdutos
     Top = 480
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'descricao'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'codigo_barras'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'data_cadastro'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'grupo_produto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'unidade'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'preco_compra'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'margem_lucro_varejo'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'preco_venda_varejo'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'observacao'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'item_comercial'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'prazo_validade'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'nao_movimenta_estoque'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'ncm'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'is_composed'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'largura'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'altura'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'profundidade'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'peso'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'ipi_template_id'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'similares'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'origem'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'numero_reg_ms'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'preco_venda_atacado'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'margem_lucro_atacado'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'tipo_produto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'quant_caixa'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cmv'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'preco_venda_consignado'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'margem_lucro_consignado'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'ativo'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'caderno'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cest'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'lista_pis_cofins'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'p_pis'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cst_pis'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'p_cofins'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cst_cofins'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'tipo_produto_interno'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'comissao'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'nfci_opc'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'desconto_de'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'desconto_ate'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'local_estoque'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'local_estoque_grosso'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'quant_caixa_operacao'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'desconto_automatico'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'promocao_ate'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'em_promocao'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vbcstret'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'vicmsstret'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'picmsstret'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'c_class_trib'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cst_ibs_cbs'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'OLD_id'
+        ParamType = ptUnknown
       end>
   end
   object dsProdutos: TDataSource
@@ -5315,14 +5433,18 @@ object frmCadProdutos: TfrmCadProdutos
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsProdutos
     Left = 136
     Top = 464
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryFornProdproduto: TLongintField
       DisplayWidth = 10
@@ -5373,7 +5495,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Precision = 327683
     end
     object qryFornProddescricao_produto: TStringField
@@ -5419,19 +5541,29 @@ object frmCadProdutos: TfrmCadProdutos
     Top = 488
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'produto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'fornecedor'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'codigo_produto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'OLD_produto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'OLD_fornecedor'
+        ParamType = ptUnknown
       end>
   end
   object qryEstoqueLotes: TZQuery
@@ -5453,14 +5585,18 @@ object frmCadProdutos: TfrmCadProdutos
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsProdutos
     Left = 222
     Top = 448
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryEstoqueLotesid: TLongintField
       DisplayWidth = 10
@@ -5470,7 +5606,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryEstoqueLotesproduto: TLongintField
       DisplayWidth = 10
@@ -5480,7 +5616,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryEstoqueLoteslote: TStringField
       DisplayWidth = 80
@@ -5545,7 +5681,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryEstoqueLoteslocalizacao: TStringField
       DisplayWidth = 80
@@ -5588,14 +5724,18 @@ object frmCadProdutos: TfrmCadProdutos
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsProdutos
     Left = 312
     Top = 464
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryKitid: TLongintField
       DisplayWidth = 10
@@ -5605,7 +5745,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryKitproduto_master: TLongintField
       DisplayWidth = 10
@@ -5695,22 +5835,34 @@ object frmCadProdutos: TfrmCadProdutos
     Top = 488
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'produto_master'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'produto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'quantidade'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'preco'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'OLD_id'
+        ParamType = ptUnknown
       end>
   end
   object updEstoqueLotes: TZUpdateSQL
@@ -5746,34 +5898,54 @@ object frmCadProdutos: TfrmCadProdutos
     Top = 488
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'produto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'lote'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'quantidade'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'data_entrada'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'data_validade'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'data_fabricacao'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'empresa'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'localizacao'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'OLD_id'
+        ParamType = ptUnknown
       end>
   end
   object qryHistorico: TZReadOnlyQuery
@@ -5787,14 +5959,18 @@ object frmCadProdutos: TfrmCadProdutos
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsProdutos
     Left = 416
     Top = 450
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
   end
   object dsHistorico: TDataSource
@@ -5819,28 +5995,32 @@ object frmCadProdutos: TfrmCadProdutos
   end
   object ZQuery1: TZQuery
     Connection = dbConnect.ZConnection1
-    Sequence = ZSequence1
-    SequenceField = 'id'
     SQL.Strings = (
       'Select * from produto_imagem'
       'Where produto=:id'
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsProdutos
+    Sequence = ZSequence1
+    SequenceField = 'id'
     Left = 808
     Top = 64
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
   end
   object qryProdutoICMS: TZQuery
     Connection = dbConnect.ZConnection1
-    OnNewRecord = qryProdutoICMSNewRecord
     UpdateObject = updProdutoICMS
+    OnNewRecord = qryProdutoICMSNewRecord
     SQL.Strings = (
       'SELECT id, produto, uf_destino, bc_include_ipi, bc_st_include_ipi, cst_csosn, '
       '       mod_bc, mod_bc_st, p_cred_sn, p_cred_sn_valid_until, p_icms, '
@@ -5855,14 +6035,18 @@ object frmCadProdutos: TfrmCadProdutos
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsProdutos
     Left = 512
     Top = 448
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryProdutoICMSid: TLargeintField
       FieldKind = fkData
@@ -5871,7 +6055,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryProdutoICMSproduto: TLongintField
       FieldKind = fkData
@@ -5880,7 +6064,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryProdutoICMSuf_destino: TStringField
       FieldKind = fkData
@@ -5889,7 +6073,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 8
     end
     object qryProdutoICMSbc_include_ipi: TBooleanField
@@ -6118,14 +6302,18 @@ object frmCadProdutos: TfrmCadProdutos
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsProdutos
     Left = 752
     Top = 584
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryHistoricoEntradasfornecedor: TStringField
       FieldKind = fkData
@@ -6193,7 +6381,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryHistoricoEntradasid: TLongintField
       FieldKind = fkData
@@ -6202,7 +6390,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryHistoricoEntradaschave_nfe: TStringField
       FieldKind = fkData
@@ -6221,7 +6409,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryHistoricoEntradasvbcst: TFloatField
       FieldKind = fkData
@@ -6306,64 +6494,104 @@ object frmCadProdutos: TfrmCadProdutos
     Top = 472
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'produto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'uf_destino'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'bc_include_ipi'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'bc_st_include_ipi'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cst_csosn'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'mod_bc'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'mod_bc_st'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'p_cred_sn'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'p_cred_sn_valid_until'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'p_icms'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'p_icms_st'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'p_mva_st'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'p_red_bc'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'p_red_bc_st'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'fcp'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'p_red_mvs_sn'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'preco_max_consumidor'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'cbenef'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'OLD_id'
+        ParamType = ptUnknown
       end>
   end
   object qryDadosEntrada: TZQuery
@@ -6376,20 +6604,28 @@ object frmCadProdutos: TfrmCadProdutos
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'produto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsHistoricoEntradas
     Left = 832
     Top = 608
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'produto'
+        ParamType = ptUnknown
       end    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryDadosEntradaid: TLongintField
       FieldKind = fkData
@@ -6398,7 +6634,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryDadosEntradanfentrada: TLongintField
       FieldKind = fkData
@@ -6416,7 +6652,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryDadosEntradadescricao: TStringField
       FieldKind = fkData
@@ -6505,7 +6741,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 4
     end
     object qryDadosEntradavalorunitario: TFloatField
@@ -6515,7 +6751,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       DisplayFormat = ',0.00##'
       Precision = 983044
     end
@@ -6901,14 +7137,18 @@ object frmCadProdutos: TfrmCadProdutos
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     DataSource = dsProdutos
     Left = 326
     Top = 336
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryProdutoUnidadeid: TLongintField
       FieldKind = fkData
@@ -6917,7 +7157,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryProdutoUnidadeproduto: TLongintField
       FieldKind = fkData
@@ -6926,7 +7166,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryProdutoUnidadeunidade: TStringField
       FieldKind = fkData
@@ -6935,7 +7175,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 40
     end
     object qryProdutoUnidadefator: TFloatField
@@ -6945,7 +7185,7 @@ object frmCadProdutos: TfrmCadProdutos
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       DisplayFormat = ',0.####'
       Precision = 327683
     end

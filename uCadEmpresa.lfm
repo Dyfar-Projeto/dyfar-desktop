@@ -1664,13 +1664,17 @@ object frmCadEmpresa: TfrmCadEmpresa
     )
     Params = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     Left = 624
     Top = 112
     ParamData = <    
       item
+        DataType = ftUnknown
         Name = 'id'
+        ParamType = ptUnknown
       end>
     object qryEmpresaid: TLongintField
       DisplayWidth = 10
@@ -1680,7 +1684,7 @@ object frmCadEmpresa: TfrmCadEmpresa
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryEmpresanome: TStringField
       DisplayWidth = 320
@@ -1931,7 +1935,7 @@ object frmCadEmpresa: TfrmCadEmpresa
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryEmpresaabreviacao: TStringField
       DisplayWidth = 80
@@ -2047,7 +2051,7 @@ object frmCadEmpresa: TfrmCadEmpresa
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryEmpresaultima_nfce_autorizada: TLongintField
       FieldKind = fkData
@@ -2056,7 +2060,7 @@ object frmCadEmpresa: TfrmCadEmpresa
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryEmpresawebpage: TStringField
       FieldKind = fkData
@@ -2141,7 +2145,7 @@ object frmCadEmpresa: TfrmCadEmpresa
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryBoletoConfigbanco: TLongintField
       FieldKind = fkData

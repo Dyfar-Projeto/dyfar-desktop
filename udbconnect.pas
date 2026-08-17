@@ -115,11 +115,21 @@ begin
   dbname         := ReadStringINI(ConfigRecord.FileNamePath,'conexao','dbname',ConfigRecord.DBNAME );//IniPropStorage1.ReadString('dbname'  ,ConfigRecord.DBNAME);
   catalogo       := ReadStringINI(ConfigRecord.FileNamePath,'conexao','catalogo','public' );//IniPropStorage1.ReadString('catalogo','public');
   porta          := ReadIntegerINI(ConfigRecord.FileNamePath,'conexao','porta', 0) ;//IniPropStorage1.ReadInteger('porta'  ,ConfigRecord.Porta);
+  ZConnection1.Properties.Add('AutoEncodeStrings=ON');
+  ZConnection1.Properties.Add('codepage=UTF8');
+  ZConnection1.Properties.Add('controls_cp=CP_UTF8');
+  ZConnection1.Properties.Add('timeout=30');
+  ZConnection1.Properties.Add('keepalives=1');
+  ZConnection1.Properties.Add('keepalives_idle=30');
+  ZConnection1.Properties.Add('keepalives_interval=10');
+  ZConnection1.Properties.Add('keepalives_count=3');
+  ZConnection1.Properties.Add('currentSchema=%s',[catalogo]);
+
   ZConnection1.LibraryLocation := '';
   if not ConnectTo(ZConnection1,dbname,host, UserServer, PassWordServer, catalogo, porta) then
      Application.Terminate;
-  ZConnection1.DbcConnection.SetCatalog(catalogo);
-  ZConnection1.Catalog := catalogo;
+  //ZConnection1.DbcConnection.SetCatalog(catalogo);
+  //ZConnection1.Catalog := catalogo;
   ExecSql(ZConnection1,'SET search_path = ''%s''',[catalogo]);
   for l := 1 to 3 do begin
     prompt := Format('Digite seu nome e senha (%d/3)',[l]);

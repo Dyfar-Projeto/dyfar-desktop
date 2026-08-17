@@ -1,15 +1,15 @@
 object frmPedidoCliente: TfrmPedidoCliente
-  Left = 321
+  Left = 382
   Height = 799
-  Top = 39
+  Top = 76
   Width = 1125
   Caption = 'Pedido do cliente'
   ClientHeight = 799
   ClientWidth = 1125
   Menu = MainMenu1
+  LCLVersion = '4.0.0.4'
   OnCreate = FormCreate
   OnResize = FormResize
-  LCLVersion = '2.0.2.0'
   object ToolBar1: TToolBar
     Left = 0
     Height = 52
@@ -106,10 +106,10 @@ object frmPedidoCliente: TfrmPedidoCliente
       ClientHeight = 48
       ClientWidth = 240
       DataSource = dsPedidoVenda
-      OnClick = DBNavigator1Click
       Options = []
       TabOrder = 0
       VisibleButtons = [nbInsert, nbEdit, nbPost, nbCancel, nbRefresh]
+      OnClick = DBNavigator1Click
     end
     object ToolButton10: TToolButton
       Left = 424
@@ -263,9 +263,9 @@ object frmPedidoCliente: TfrmPedidoCliente
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
-      OnClick = btGerarContasClick
       ShowHint = True
       ParentShowHint = False
+      OnClick = btGerarContasClick
     end
   end
   object PageControl1: TPageControl
@@ -275,10 +275,10 @@ object frmPedidoCliente: TfrmPedidoCliente
     Width = 1125
     ActivePage = TabSheet2
     Align = alClient
+    Options = [nboDoChangeOnSetIndex]
     TabIndex = 0
     TabOrder = 1
     OnChange = PageControl1Change
-    Options = [nboDoChangeOnSetIndex]
     object TabSheet2: TTabSheet
       Caption = 'Endereço e outras informações'
       ClientHeight = 719
@@ -333,8 +333,8 @@ object frmPedidoCliente: TfrmPedidoCliente
                 'Pendentes'
                 'Consulta'
               )
-              OnSelectionChanged = RadioGroup1SelectionChanged
               TabOrder = 0
+              OnSelectionChanged = RadioGroup1SelectionChanged
             end
             object Button1: TButton
               Left = 912
@@ -342,8 +342,8 @@ object frmPedidoCliente: TfrmPedidoCliente
               Top = 14
               Width = 75
               Caption = 'Aplicar'
-              OnClick = Button1Click
               TabOrder = 1
+              OnClick = Button1Click
             end
             object Panel2: TPanel
               Left = 208
@@ -623,9 +623,7 @@ object frmPedidoCliente: TfrmPedidoCliente
             AlternateColor = clMoneyGreen
             Color = clWindow
             DrawFullLine = False
-            FocusColor = clRed
             SelectedColor = clHighlight
-            GridLineStyle = psSolid
             DataSource = dsListaPedidos
             Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
             TabOrder = 1
@@ -930,9 +928,7 @@ object frmPedidoCliente: TfrmPedidoCliente
               AlternateColor = clMoneyGreen
               Color = clWindow
               DrawFullLine = False
-              FocusColor = clRed
               SelectedColor = clHighlight
-              GridLineStyle = psSolid
               DataSource = dsPedidoVendaItens
               Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
               TabOrder = 0
@@ -946,10 +942,10 @@ object frmPedidoCliente: TfrmPedidoCliente
               ButtonWidth = 23
               MaxLength = 0
               NumGlyphs = 1
-              OnButtonClick = edProdutoButtonClick
-              OnKeyDown = edProdutoKeyDown
               PasswordChar = #0
               TabOrder = 1
+              OnButtonClick = edProdutoButtonClick
+              OnKeyDown = edProdutoKeyDown
             end
             object edDescricao: TEditButton
               Left = 96
@@ -960,9 +956,9 @@ object frmPedidoCliente: TfrmPedidoCliente
               DirectInput = False
               MaxLength = 0
               NumGlyphs = 1
-              OnButtonClick = edDescricaoButtonClick
               PasswordChar = #0
               TabOrder = 2
+              OnButtonClick = edDescricaoButtonClick
             end
             object edQuantidade: TCurrencyEdit
               Left = 543
@@ -971,10 +967,7 @@ object frmPedidoCliente: TfrmPedidoCliente
               Width = 52
               Alignment = taRightJustify
               DisplayFormat = ',0.##'
-              MaxValue = 0
-              MinValue = 0
               TabOrder = 3
-              Value = 0
               OnKeyDown = edQuantidadeKeyDown
             end
             object edDesconto: TCurrencyEdit
@@ -984,10 +977,7 @@ object frmPedidoCliente: TfrmPedidoCliente
               Width = 44
               Alignment = taRightJustify
               DisplayFormat = '0.##'
-              MaxValue = 0
-              MinValue = 0
               TabOrder = 4
-              Value = 0
               OnKeyDown = edDescontoKeyDown
             end
             object btLancarItem: TButton
@@ -996,8 +986,8 @@ object frmPedidoCliente: TfrmPedidoCliente
               Top = 12
               Width = 66
               Caption = 'Lançar'
-              OnClick = btLancarItemClick
               TabOrder = 5
+              OnClick = btLancarItemClick
             end
             object Label2: TLabel
               Left = 7
@@ -1037,10 +1027,7 @@ object frmPedidoCliente: TfrmPedidoCliente
               Top = 13
               Width = 72
               Alignment = taRightJustify
-              MaxValue = 0
-              MinValue = 0
               TabOrder = 6
-              Value = 0
               OnKeyDown = edPrecoKeyDown
             end
             object Label13: TLabel
@@ -1067,8 +1054,8 @@ object frmPedidoCliente: TfrmPedidoCliente
               Top = 12
               Width = 65
               Caption = 'Del. Item'
-              OnClick = btLancarItem1Click
               TabOrder = 8
+              OnClick = btLancarItem1Click
             end
             object Label11: TLabel
               Left = 496
@@ -1139,18 +1126,15 @@ object frmPedidoCliente: TfrmPedidoCliente
               Width = 80
               Alignment = taRightJustify
               Color = clSilver
-              MaxValue = 0
-              MinValue = 0
               ReadOnly = True
               TabOrder = 2
               TabStop = False
-              Value = 0
             end
             object Label7: TLabel
               Left = 696
               Height = 15
               Top = 40
-              Width = 83
+              Width = 82
               Caption = 'Total do pedido'
               ParentColor = False
             end
@@ -1174,7 +1158,7 @@ object frmPedidoCliente: TfrmPedidoCliente
               Left = 694
               Height = 15
               Top = 8
-              Width = 116
+              Width = 115
               Caption = 'ICMS Subst. Tributária'
               ParentColor = False
             end
@@ -1185,12 +1169,9 @@ object frmPedidoCliente: TfrmPedidoCliente
               Width = 80
               Alignment = taRightJustify
               Color = clSilver
-              MaxValue = 0
-              MinValue = 0
               ReadOnly = True
               TabOrder = 1
               TabStop = False
-              Value = 0
             end
             object Label34: TLabel
               Left = 400
@@ -1209,7 +1190,6 @@ object frmPedidoCliente: TfrmPedidoCliente
               Width = 120
               DataField = 'numero_ped_cliente'
               DataSource = dsPedidoVenda
-              CharCase = ecNormal
               MaxLength = 0
               TabOrder = 3
             end
@@ -1221,7 +1201,6 @@ object frmPedidoCliente: TfrmPedidoCliente
               DataField = 'forma_pgto'
               DataSource = dsPedidoVenda
               ReadOnly = True
-              CharCase = ecNormal
               MaxLength = 0
               TabOrder = 5
               TabStop = False
@@ -1241,7 +1220,6 @@ object frmPedidoCliente: TfrmPedidoCliente
               Width = 151
               DataField = 'prazo_pgto'
               DataSource = dsPedidoVenda
-              CharCase = ecNormal
               MaxLength = 0
               TabOrder = 4
               TabStop = False
@@ -1282,7 +1260,6 @@ object frmPedidoCliente: TfrmPedidoCliente
               DataField = 'id'
               DataSource = dsPedidoVenda
               ReadOnly = True
-              CharCase = ecNormal
               Color = clSilver
               MaxLength = 0
               TabOrder = 0
@@ -1332,7 +1309,6 @@ object frmPedidoCliente: TfrmPedidoCliente
               DataField = 'contato'
               DataSource = dsPedidoVenda
               ReadOnly = True
-              CharCase = ecNormal
               Color = clActiveBorder
               MaxLength = 0
               TabOrder = 5
@@ -1345,9 +1321,9 @@ object frmPedidoCliente: TfrmPedidoCliente
               Top = 1
               Width = 23
               Caption = '...'
-              OnClick = SpeedButton1Click
               ShowHint = True
               ParentShowHint = False
+              OnClick = SpeedButton1Click
             end
             object DBEdit21: TDBEdit
               Left = 88
@@ -1357,7 +1333,6 @@ object frmPedidoCliente: TfrmPedidoCliente
               DataField = 'vrepresentante'
               DataSource = dsPedidoVenda
               ReadOnly = True
-              CharCase = ecNormal
               Color = clActiveBorder
               MaxLength = 0
               TabOrder = 6
@@ -1378,9 +1353,9 @@ object frmPedidoCliente: TfrmPedidoCliente
               Top = 34
               Width = 23
               Caption = '...'
-              OnClick = SpeedButton3Click
               ShowHint = True
               ParentShowHint = False
+              OnClick = SpeedButton3Click
             end
             object DBDateEdit1: TDBDateEdit
               Left = 848
@@ -1405,7 +1380,6 @@ object frmPedidoCliente: TfrmPedidoCliente
               DataField = 'email'
               DataSource = dsPedidoVenda
               ReadOnly = True
-              CharCase = ecNormal
               Color = clActiveBorder
               MaxLength = 0
               TabOrder = 3
@@ -1468,7 +1442,6 @@ object frmPedidoCliente: TfrmPedidoCliente
               DataField = 'cnpj'
               DataSource = dsPedidoVenda
               ReadOnly = True
-              CharCase = ecNormal
               Color = clActiveBorder
               MaxLength = 0
               TabOrder = 2
@@ -1492,10 +1465,6 @@ object frmPedidoCliente: TfrmPedidoCliente
     Margins.TopMargin = 7
     Margins.RightMargin = 7
     Margins.BottomMargin = 7
-    RealBounds.Left = 0
-    RealBounds.Top = 0
-    RealBounds.Width = 0
-    RealBounds.Height = 0
     Title = 'pedido_compra'
     JobTitle = 'pedido_venda'
     ExpressionParser = RLExpressionParser1
@@ -1511,20 +1480,12 @@ object frmPedidoCliente: TfrmPedidoCliente
       Borders.DrawTop = False
       Borders.DrawRight = False
       Borders.DrawBottom = True
-      RealBounds.Left = 0
-      RealBounds.Top = 0
-      RealBounds.Width = 0
-      RealBounds.Height = 0
       object RLLabel9: TRLLabel
         Left = 1
         Height = 16
         Top = 22
         Width = 39
         Caption = 'Data.:'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel10: TRLLabel
         Left = 80
@@ -1532,10 +1493,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 22
         Width = 39
         Caption = 'Data.:'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel11: TRLLabel
         Left = 1
@@ -1543,10 +1500,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 41
         Width = 46
         Caption = 'Nome.:'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel14: TRLLabel
         Left = 68
@@ -1558,10 +1511,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel15: TRLLabel
         Left = 112
@@ -1573,10 +1522,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel16: TRLLabel
         Left = 192
@@ -1588,10 +1533,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel17: TRLLabel
         Left = 248
@@ -1603,10 +1544,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel18: TRLLabel
         Left = 648
@@ -1618,10 +1555,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel19: TRLLabel
         Left = 695
@@ -1633,10 +1566,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText3: TRLDBText
         Left = 80
@@ -1645,10 +1574,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Width = 36
         DataField = 'nome'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel20: TRLLabel
         Left = 3
@@ -1656,10 +1581,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 60
         Width = 67
         Caption = 'Endereço.:'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText13: TRLDBText
         Left = 80
@@ -1668,10 +1589,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Width = 239
         DataFormula = 'endereco + ''  '' + cidade + ''  CEP  ''+cep'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel21: TRLLabel
         Left = 3
@@ -1683,10 +1600,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel22: TRLLabel
         Left = 653
@@ -1700,10 +1613,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel23: TRLLabel
         Left = 0
@@ -1717,10 +1626,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsUnderline]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText4: TRLDBText
         Left = 464
@@ -1729,10 +1634,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Width = 88
         DataField = 'vrepresentante'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel34: TRLLabel
         Left = 344
@@ -1740,10 +1641,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 22
         Width = 100
         Caption = 'Representante.: '
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
     end
     object RLBand2: TRLBand
@@ -1755,10 +1652,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       Font.Height = -11
       Font.Name = 'Arial'
       ParentFont = False
-      RealBounds.Left = 0
-      RealBounds.Top = 0
-      RealBounds.Width = 0
-      RealBounds.Height = 0
       BeforePrint = RLBand2BeforePrint
       object RLDBText1: TRLDBText
         Left = 64
@@ -1769,10 +1662,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         AutoSize = False
         DataField = 'quantidade'
         DataSource = dsPedidoVendaItens
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText6: TRLDBText
         Left = 192
@@ -1782,10 +1671,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Alignment = taRightJustify
         DataField = 'produto'
         DataSource = dsPedidoVendaItens
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText7: TRLDBText
         Left = 248
@@ -1795,10 +1680,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         AutoSize = False
         DataField = 'descricao'
         DataSource = dsPedidoVendaItens
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText8: TRLDBText
         Left = 616
@@ -1808,10 +1689,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Alignment = taRightJustify
         DataField = 'preco_unitario'
         DataSource = dsPedidoVendaItens
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText9: TRLDBText
         Left = 719
@@ -1821,10 +1698,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Alignment = taRightJustify
         DataField = 'total'
         DataSource = dsPedidoVendaItens
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText10: TRLDBText
         Left = 112
@@ -1834,10 +1707,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         AutoSize = False
         DataField = 'slote'
         DataSource = dsPedidoVendaItens
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText11: TRLDBText
         Left = 3
@@ -1847,10 +1716,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         AutoSize = False
         DataField = 'local_estoque'
         DataSource = dsPedidoVendaItens
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
     end
     object RLBand3: TRLBand
@@ -1859,10 +1724,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       Top = 254
       Width = 742
       BandType = btSummary
-      RealBounds.Left = 0
-      RealBounds.Top = 0
-      RealBounds.Width = 0
-      RealBounds.Height = 0
       BeforePrint = RLBand3BeforePrint
       object RLDBResult1: TRLDBResult
         Left = 672
@@ -1873,10 +1734,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         DataField = 'total'
         DataSource = dsPedidoVendaItens
         Info = riSum
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel12: TRLLabel
         Left = 507
@@ -1884,22 +1741,13 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 17
         Width = 92
         Caption = 'Total do pedido'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw1: TRLDraw
         Left = 532
         Height = 9
         Top = 5
         Width = 208
-        Angle = 0
         DrawKind = dkLine
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel24: TRLLabel
         Left = 3
@@ -1907,22 +1755,13 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 60
         Width = 81
         Caption = 'Separado por'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw2: TRLDraw
         Left = 96
         Height = 9
         Top = 67
         Width = 208
-        Angle = 0
         DrawKind = dkLine
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel25: TRLLabel
         Left = 3
@@ -1930,22 +1769,13 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 91
         Width = 80
         Caption = 'Conferido por'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw3: TRLDraw
         Left = 96
         Height = 9
         Top = 98
         Width = 208
-        Angle = 0
         DrawKind = dkLine
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel26: TRLLabel
         Left = 320
@@ -1953,10 +1783,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 60
         Width = 35
         Caption = 'Data:'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel27: TRLLabel
         Left = 456
@@ -1964,10 +1790,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 60
         Width = 35
         Caption = 'Hora:'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel28: TRLLabel
         Left = 360
@@ -1975,10 +1797,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 60
         Width = 89
         Caption = '___/____/____'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel29: TRLLabel
         Left = 496
@@ -1986,10 +1804,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 60
         Width = 57
         Caption = '___:____'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel30: TRLLabel
         Left = 320
@@ -1997,10 +1811,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 88
         Width = 35
         Caption = 'Data:'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel31: TRLLabel
         Left = 360
@@ -2008,10 +1818,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 88
         Width = 89
         Caption = '___/____/____'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel32: TRLLabel
         Left = 456
@@ -2019,10 +1825,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 88
         Width = 35
         Caption = 'Hora:'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel33: TRLLabel
         Left = 496
@@ -2030,10 +1832,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 88
         Width = 57
         Caption = '___:____'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel35: TRLLabel
         Left = 3
@@ -2041,10 +1839,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 17
         Width = 170
         Caption = 'Quantidade de itens únicos.:'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
     end
     object RLBand4: TRLBand
@@ -2053,10 +1847,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       Top = 26
       Width = 742
       BandType = btHeader
-      RealBounds.Left = 0
-      RealBounds.Top = 0
-      RealBounds.Width = 0
-      RealBounds.Height = 0
       Visible = False
       object pnCabecalho: TRLPanel
         Left = 0
@@ -2065,19 +1855,11 @@ object frmPedidoCliente: TfrmPedidoCliente
         Width = 742
         Align = faClientTop
         Borders.Sides = sdAll
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         object RLLabel4: TRLLabel
           Left = 1
           Height = 16
           Top = 57
           Width = 58
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel3: TRLLabel
           Left = 1
@@ -2085,10 +1867,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Top = 6
           Width = 39
           Caption = 'Data.:'
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLPanel3: TRLPanel
           Left = 621
@@ -2101,10 +1879,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Borders.DrawTop = False
           Borders.DrawRight = False
           Borders.DrawBottom = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
           object RLLabel2: TRLLabel
             Left = 1
             Height = 18
@@ -2117,10 +1891,6 @@ object frmPedidoCliente: TfrmPedidoCliente
             Font.Height = -16
             Font.Name = 'Arial'
             ParentFont = False
-            RealBounds.Left = 0
-            RealBounds.Top = 0
-            RealBounds.Width = 0
-            RealBounds.Height = 0
           end
           object RLLabel5: TRLLabel
             Left = 41
@@ -2128,10 +1898,6 @@ object frmPedidoCliente: TfrmPedidoCliente
             Top = 24
             Width = 22
             Caption = 'N.º'
-            RealBounds.Left = 0
-            RealBounds.Top = 0
-            RealBounds.Width = 0
-            RealBounds.Height = 0
           end
           object RLLabel6: TRLLabel
             Left = 25
@@ -2140,10 +1906,6 @@ object frmPedidoCliente: TfrmPedidoCliente
             Width = 68
             Alignment = taCenter
             Caption = '000000000'
-            RealBounds.Left = 0
-            RealBounds.Top = 0
-            RealBounds.Width = 0
-            RealBounds.Height = 0
           end
         end
         object RLLabel7: TRLLabel
@@ -2152,10 +1914,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Top = 23
           Width = 39
           Caption = 'Data.:'
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel8: TRLLabel
           Left = 1
@@ -2163,10 +1921,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Top = 40
           Width = 39
           Caption = 'Data.:'
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
       end
       object RLPanel2: TRLPanel
@@ -2175,10 +1929,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 0
         Width = 742
         Align = faTop
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         Visible = False
         object RLLabel1: TRLLabel
           Left = 0
@@ -2192,10 +1942,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Name = 'Arial'
           Font.Style = [fsUnderline]
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
       end
     end
@@ -2205,10 +1951,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       Top = 370
       Width = 742
       BandType = btFooter
-      RealBounds.Left = 0
-      RealBounds.Top = 0
-      RealBounds.Width = 0
-      RealBounds.Height = 0
       object RLSystemInfo2: TRLSystemInfo
         Left = 0
         Height = 14
@@ -2220,10 +1962,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Info = itFullDate
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         Text = 'Impresso em '
       end
       object RLSystemInfo3: TRLSystemInfo
@@ -2238,10 +1976,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Info = itPagePreview
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         Text = 'Página # / #'
       end
     end
@@ -2255,10 +1989,6 @@ object frmPedidoCliente: TfrmPedidoCliente
     Font.Color = clBlack
     Font.Height = -13
     Font.Name = 'Arial'
-    RealBounds.Left = 0
-    RealBounds.Top = 0
-    RealBounds.Width = 0
-    RealBounds.Height = 0
     Visible = False
     object RLBand6: TRLBand
       Left = 38
@@ -2271,10 +2001,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       Borders.DrawTop = False
       Borders.DrawRight = False
       Borders.DrawBottom = False
-      RealBounds.Left = 0
-      RealBounds.Top = 0
-      RealBounds.Width = 0
-      RealBounds.Height = 0
       object RLImage1: TRLImage
         Left = 0
         Height = 81
@@ -51695,10 +51421,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           0000000000000000000000000000000000000000000000000000000000000000
           00000000000000000000000000000000000000000000001FFFD9
         }
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         Stretch = True
       end
       object RLLabel36: TRLLabel
@@ -51711,10 +51433,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -20
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText5: TRLDBText
         Left = 694
@@ -51728,10 +51446,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -20
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLPanel8: TRLPanel
         Left = 0
@@ -51744,10 +51458,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Borders.DrawTop = True
         Borders.DrawRight = True
         Borders.DrawBottom = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         object RLLabel37: TRLLabel
           Left = 0
           Height = 16
@@ -51759,10 +51469,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel38: TRLLabel
           Left = 456
@@ -51775,10 +51481,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel39: TRLLabel
           Left = 0
@@ -51791,10 +51493,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel40: TRLLabel
           Left = 0
@@ -51807,10 +51505,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel41: TRLLabel
           Left = 0
@@ -51823,10 +51517,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel42: TRLLabel
           Left = 0
@@ -51839,10 +51529,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel43: TRLLabel
           Left = 456
@@ -51855,10 +51541,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel44: TRLLabel
           Left = 456
@@ -51871,90 +51553,54 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Name = 'Arial'
           Font.Style = [fsBold]
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel64: TRLLabel
           Left = 84
           Height = 16
           Top = 5
           Width = 65
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel65: TRLLabel
           Left = 588
           Height = 16
           Top = 5
           Width = 65
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel66: TRLLabel
           Left = 84
           Height = 16
           Top = 22
           Width = 65
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel67: TRLLabel
           Left = 508
           Height = 16
           Top = 22
           Width = 65
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel68: TRLLabel
           Left = 84
           Height = 16
           Top = 38
           Width = 65
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel69: TRLLabel
           Left = 508
           Height = 16
           Top = 39
           Width = 65
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel70: TRLLabel
           Left = 84
           Height = 16
           Top = 54
           Width = 65
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLLabel71: TRLLabel
           Left = 84
           Height = 16
           Top = 71
           Width = 65
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
       end
     end
@@ -51969,10 +51615,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       Borders.DrawTop = True
       Borders.DrawRight = True
       Borders.DrawBottom = True
-      RealBounds.Left = 0
-      RealBounds.Top = 0
-      RealBounds.Width = 0
-      RealBounds.Height = 0
       object RLLabel45: TRLLabel
         Left = 304
         Height = 16
@@ -51984,10 +51626,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel46: TRLLabel
         Left = 0
@@ -52000,10 +51638,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText17: TRLDBText
         Left = 85
@@ -52012,10 +51646,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Width = 56
         DataField = 'telefone1'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         BeforePrint = RLDBText17BeforePrint
       end
       object RLDBText18: TRLDBText
@@ -52025,10 +51655,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Width = 42
         DataField = 'cidade'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel47: TRLLabel
         Left = 0
@@ -52041,10 +51667,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText21: TRLDBText
         Left = 85
@@ -52054,10 +51676,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         AutoSize = False
         DataField = 'endereco'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel48: TRLLabel
         Left = 0
@@ -52070,10 +51688,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel49: TRLLabel
         Left = 0
@@ -52086,10 +51700,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText22: TRLDBText
         Left = 613
@@ -52098,10 +51708,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Width = 25
         DataField = 'cep'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel50: TRLLabel
         Left = 573
@@ -52114,10 +51720,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel51: TRLLabel
         Left = 304
@@ -52130,10 +51732,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText23: TRLDBText
         Left = 360
@@ -52142,10 +51740,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Width = 36
         DataField = 'bairro'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText25: TRLDBText
         Left = 85
@@ -52155,10 +51749,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         AutoSize = False
         DataField = 'nome'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText24: TRLDBText
         Left = 360
@@ -52167,10 +51757,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Width = 47
         DataField = 'contato'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLPanel9: TRLPanel
         Left = 1
@@ -52185,10 +51771,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Borders.DrawBottom = False
         Color = 14868704
         ParentColor = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         Transparent = False
       end
     end
@@ -52207,10 +51789,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       Font.Height = -11
       Font.Name = 'Arial'
       ParentFont = False
-      RealBounds.Left = 0
-      RealBounds.Top = 0
-      RealBounds.Width = 0
-      RealBounds.Height = 0
       object RLDBText26: TRLDBText
         Left = 3
         Height = 14
@@ -52218,10 +51796,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Width = 56
         DataField = 'quantidade'
         DataSource = dsRxMemoryData1
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText27: TRLDBText
         Left = 64
@@ -52231,10 +51805,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Alignment = taRightJustify
         DataField = 'unidade'
         DataSource = dsRxMemoryData1
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText28: TRLDBText
         Left = 116
@@ -52244,10 +51814,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         AutoSize = False
         DataField = 'descricao'
         DataSource = dsRxMemoryData1
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText29: TRLDBText
         Left = 530
@@ -52258,10 +51824,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         DataField = 'preco_unitario'
         DataSource = dsRxMemoryData1
         DisplayMask = ',0.00'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         BeforePrint = RLDBText29BeforePrint
       end
       object RLDBText30: TRLDBText
@@ -52273,10 +51835,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         DataField = 'total'
         DataSource = dsRxMemoryData1
         DisplayMask = ',0.00'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         BeforePrint = RLDBText30BeforePrint
       end
       object RLDraw4: TRLDraw
@@ -52284,64 +51842,44 @@ object frmPedidoCliente: TfrmPedidoCliente
         Height = 17
         Top = 0
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw5: TRLDraw
         Left = 108
         Height = 17
         Top = 0
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw6: TRLDraw
         Left = 497
         Height = 17
         Top = 0
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw7: TRLDraw
         Left = 617
         Height = 17
         Top = 0
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
     end
     object RLBand9: TRLBand
@@ -52355,10 +51893,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       Borders.DrawTop = False
       Borders.DrawRight = True
       Borders.DrawBottom = True
-      RealBounds.Left = 0
-      RealBounds.Top = 0
-      RealBounds.Width = 0
-      RealBounds.Height = 0
       object RLLabel52: TRLLabel
         Left = 0
         Height = 16
@@ -52370,10 +51904,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel53: TRLLabel
         Left = 76
@@ -52386,10 +51916,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel54: TRLLabel
         Left = 248
@@ -52402,10 +51928,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel55: TRLLabel
         Left = 507
@@ -52418,10 +51940,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel56: TRLLabel
         Left = 625
@@ -52434,74 +51952,50 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw8: TRLDraw
         Left = 49
         Height = 32
         Top = 0
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw9: TRLDraw
         Left = 108
         Height = 32
         Top = 0
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw10: TRLDraw
         Left = 497
         Height = 32
         Top = 0
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw11: TRLDraw
         Left = 617
         Height = 32
         Top = 0
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
     end
     object RLBand10: TRLBand
@@ -52515,10 +52009,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       Borders.DrawTop = False
       Borders.DrawRight = True
       Borders.DrawBottom = True
-      RealBounds.Left = 0
-      RealBounds.Top = 0
-      RealBounds.Width = 0
-      RealBounds.Height = 0
       BeforePrint = RLBand10BeforePrint
       object RLLabel62: TRLLabel
         Left = 1
@@ -52531,10 +52021,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBMemo1: TRLDBMemo
         Left = 96
@@ -52544,10 +52030,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Behavior = [beSiteExpander]
         DataField = 'observacao'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel63: TRLLabel
         Left = 1
@@ -52567,10 +52049,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel57: TRLLabel
         Left = 8
@@ -52583,10 +52061,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel58: TRLLabel
         Left = 353
@@ -52599,10 +52073,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBText32: TRLDBText
         Left = 155
@@ -52612,10 +52082,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Alignment = taCenter
         DataField = 'forma_pgto'
         DataSource = dsPedidoVenda
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         Visible = False
       end
       object RLLabel59: TRLLabel
@@ -52629,10 +52095,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         Visible = False
       end
       object RLLabel60: TRLLabel
@@ -52646,10 +52108,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel61: TRLLabel
         Left = 507
@@ -52662,10 +52120,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Name = 'Arial'
         Font.Style = [fsBold]
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBResult2: TRLDBResult
         Left = 647
@@ -52677,10 +52131,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         DataSource = dsRxMemoryData1
         DisplayMask = ',0.00'
         Info = riSum
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDBResult3: TRLDBResult
         Left = 647
@@ -52692,42 +52142,28 @@ object frmPedidoCliente: TfrmPedidoCliente
         DataSource = dsRxMemoryData1
         DisplayMask = ',0.00'
         Info = riSum
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw12: TRLDraw
         Left = 108
         Height = 54
         Top = -1
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw13: TRLDraw
         Left = 264
         Height = 53
         Top = 0
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         Visible = False
       end
       object RLDraw14: TRLDraw
@@ -52735,56 +52171,36 @@ object frmPedidoCliente: TfrmPedidoCliente
         Height = 53
         Top = 0
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw15: TRLDraw
         Left = 1
         Height = 6
         Top = 50
         Width = 716
-        Angle = 0
         DrawKind = dkLine
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw16: TRLDraw
         Left = 617
         Height = 53
         Top = -1
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw17: TRLDraw
         Left = 1
         Height = 6
         Top = 19
         Width = 500
-        Angle = 0
         DrawKind = dkLine
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object lbCondicao: TRLLabel
         Left = 273
@@ -52794,10 +52210,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Alignment = taCenter
         AutoSize = False
         Caption = '99/99/99'
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel13: TRLLabel
         Left = 21
@@ -52805,22 +52217,13 @@ object frmPedidoCliente: TfrmPedidoCliente
         Top = 30
         Width = 66
         Alignment = taCenter
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw18: TRLDraw
         Left = 1
         Height = 6
         Top = 81
         Width = 716
-        Angle = 0
         DrawKind = dkLine
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel72: TRLLabel
         Left = 3
@@ -52834,10 +52237,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel73: TRLLabel
         Left = 3
@@ -52849,26 +52248,17 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -12
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw19: TRLDraw
         Left = 259
         Height = 30
         Top = 53
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel74: TRLLabel
         Left = 134
@@ -52881,10 +52271,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel75: TRLLabel
         Left = 134
@@ -52896,10 +52282,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -12
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel76: TRLLabel
         Left = 267
@@ -52912,10 +52294,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel77: TRLLabel
         Left = 267
@@ -52927,10 +52305,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -12
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel78: TRLLabel
         Left = 404
@@ -52943,10 +52317,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel79: TRLLabel
         Left = 404
@@ -52958,10 +52328,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -12
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel80: TRLLabel
         Left = 536
@@ -52974,10 +52340,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLLabel81: TRLLabel
         Left = 536
@@ -52989,58 +52351,39 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -12
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw20: TRLDraw
         Left = 528
         Height = 30
         Top = 53
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw21: TRLDraw
         Left = 395
         Height = 30
         Top = 53
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
       object RLDraw22: TRLDraw
         Left = 128
         Height = 30
         Top = 53
         Width = 8
-        Angle = 0
         DrawData.Strings = (
           '0 0'
           '0 1'
         )
         DrawKind = dkCustom
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
     end
     object RLBand11: TRLBand
@@ -53054,10 +52397,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       Borders.DrawTop = False
       Borders.DrawRight = False
       Borders.DrawBottom = True
-      RealBounds.Left = 0
-      RealBounds.Top = 0
-      RealBounds.Width = 0
-      RealBounds.Height = 0
       object RLPanel1: TRLPanel
         Left = 594
         Height = 61
@@ -53069,10 +52408,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Borders.DrawTop = True
         Borders.DrawRight = True
         Borders.DrawBottom = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         object RLLabel82: TRLLabel
           Left = 16
           Height = 23
@@ -53083,10 +52418,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Height = -20
           Font.Name = 'Arial'
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
         object RLDBText12: TRLDBText
           Left = 4
@@ -53101,10 +52432,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Height = -20
           Font.Name = 'Arial'
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
       end
       object RLPanel4: TRLPanel
@@ -53118,10 +52445,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Borders.DrawTop = True
         Borders.DrawRight = True
         Borders.DrawBottom = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         object RLLabel83: TRLLabel
           Left = 1
           Height = 14
@@ -53133,10 +52456,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Height = -11
           Font.Name = 'Arial'
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
       end
       object RLPanel5: TRLPanel
@@ -53146,10 +52465,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Width = 595
         Align = faTopOnly
         Borders.Sides = sdAll
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
         object RLLabel85: TRLLabel
           Left = 1
           Height = 14
@@ -53160,10 +52475,6 @@ object frmPedidoCliente: TfrmPedidoCliente
           Font.Height = -11
           Font.Name = 'Arial'
           ParentFont = False
-          RealBounds.Left = 0
-          RealBounds.Top = 0
-          RealBounds.Width = 0
-          RealBounds.Height = 0
         end
       end
       object RLLabel84: TRLLabel
@@ -53176,10 +52487,6 @@ object frmPedidoCliente: TfrmPedidoCliente
         Font.Height = -11
         Font.Name = 'Arial'
         ParentFont = False
-        RealBounds.Left = 0
-        RealBounds.Top = 0
-        RealBounds.Width = 0
-        RealBounds.Height = 0
       end
     end
   end
@@ -53201,8 +52508,8 @@ object frmPedidoCliente: TfrmPedidoCliente
         Name = 'id'
         ParamType = ptUnknown
       end>
-    left = 136
-    top = 668
+    Left = 136
+    Top = 668
     ParamData = <    
       item
         DataType = ftUnknown
@@ -53216,7 +52523,7 @@ object frmPedidoCliente: TfrmPedidoCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryPedidoVendadata: TDateTimeField
       FieldKind = fkData
@@ -53225,7 +52532,7 @@ object frmPedidoCliente: TfrmPedidoCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryPedidoVendacliente: TLongintField
       FieldKind = fkData
@@ -53234,7 +52541,7 @@ object frmPedidoCliente: TfrmPedidoCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryPedidoVendanome: TStringField
       FieldKind = fkData
@@ -53420,7 +52727,7 @@ object frmPedidoCliente: TfrmPedidoCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryPedidoVendadata_faturamento: TDateField
       FieldKind = fkData
@@ -53444,8 +52751,8 @@ object frmPedidoCliente: TfrmPedidoCliente
   end
   object dsPedidoVenda: TDataSource
     DataSet = qryPedidoVenda
-    left = 288
-    top = 748
+    Left = 288
+    Top = 748
   end
   object qryPedidoVendaItens: TZQuery
     Connection = dbConnect.ZConnection1
@@ -53471,8 +52778,8 @@ object frmPedidoCliente: TfrmPedidoCliente
       end>
     DataSource = dsPedidoVenda
     IndexFieldNames = 'id Desc'
-    left = 256
-    top = 668
+    Left = 256
+    Top = 668
     ParamData = <    
       item
         DataType = ftUnknown
@@ -53530,8 +52837,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ReadOnly = False
       Required = False
       DisplayFormat = ',0.00#'
-      MaxValue = 0
-      MinValue = 0
       Precision = 983043
     end
     object qryPedidoVendaItenspreco_unitario: TFloatField
@@ -53544,8 +52849,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ReadOnly = False
       Required = False
       DisplayFormat = ',0.00#'
-      MaxValue = 0
-      MinValue = 0
       Precision = 983043
     end
     object qryPedidoVendaItensdesconto: TFloatField
@@ -53558,8 +52861,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ReadOnly = False
       Required = False
       DisplayFormat = ',0.00'
-      MaxValue = 0
-      MinValue = 0
       Precision = 327682
     end
     object qryPedidoVendaItensentregue: TBooleanField
@@ -53583,8 +52884,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ReadOnly = False
       Required = False
       DisplayFormat = ',0.00'
-      MaxValue = 0
-      MinValue = 0
     end
     object qryPedidoVendaItenspreco_unitario_liq: TFloatField
       DisplayWidth = 10
@@ -53596,8 +52895,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ReadOnly = False
       Required = False
       DisplayFormat = ',0.00'
-      MaxValue = 0
-      MinValue = 0
     end
     object qryPedidoVendaItensunidade: TStringField
       DisplayWidth = 20
@@ -53627,8 +52924,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ReadOnly = False
       Required = False
       DisplayFormat = ',0.00'
-      MaxValue = 0
-      MinValue = 0
       Precision = 983042
     end
     object qryPedidoVendaItensslote: TStringField
@@ -53649,8 +52944,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = 983043
     end
     object qryPedidoVendaItenslocal_estoque: TStringField
@@ -53681,8 +52974,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = 983043
     end
     object qryPedidoVendaItenscomissao: TFloatField
@@ -53694,8 +52985,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ReadOnly = False
       Required = False
       DisplayFormat = ',0.00'
-      MaxValue = 0
-      MinValue = 0
       Precision = 983043
     end
     object qryPedidoVendaItensvlrstTotal: TFloatField
@@ -53707,18 +52996,16 @@ object frmPedidoCliente: TfrmPedidoCliente
       ReadOnly = False
       Required = False
       DisplayFormat = ',0.00'
-      MaxValue = 0
-      MinValue = 0
     end
   end
   object dsPedidoVendaItens: TDataSource
     DataSet = qryPedidoVendaItens
-    left = 224
-    top = 744
+    Left = 224
+    Top = 744
   end
   object PopupMenu1: TPopupMenu
-    left = 584
-    top = 56
+    Left = 584
+    Top = 56
     object Impressodopedido: TMenuItem
       Caption = 'Impressão do pedido'
       Default = True
@@ -53730,8 +53017,8 @@ object frmPedidoCliente: TfrmPedidoCliente
     end
   end
   object PopupMenu2: TPopupMenu
-    left = 368
-    top = 48
+    Left = 368
+    Top = 48
     object mnLocalizarPedido: TMenuItem
       Caption = 'Localizar pelo nome'
       OnClick = mnLocalizarPedidoClick
@@ -53739,14 +53026,16 @@ object frmPedidoCliente: TfrmPedidoCliente
   end
   object ACBrCEP1: TACBrCEP
     ProxyPort = '8080'
+    ContentsEncodingCompress = []
+    NivelLog = 0
     WebService = wsRepublicaVirtual
     PesquisarIBGE = True
-    left = 64
-    top = 264
+    Left = 64
+    Top = 264
   end
   object RLExpressionParser1: TRLExpressionParser
-    left = 40
-    top = 200
+    Left = 40
+    Top = 200
   end
   object updPedidoVendaItens: TZUpdateSQL
     DeleteSQL.Strings = (
@@ -53780,8 +53069,8 @@ object frmPedidoCliente: TfrmPedidoCliente
       '  pedido_venda_itens.id = :OLD_id'
     )
     UseSequenceFieldForRefreshSQL = False
-    left = 520
-    top = 720
+    Left = 520
+    Top = 720
     ParamData = <    
       item
         DataType = ftUnknown
@@ -53862,8 +53151,8 @@ object frmPedidoCliente: TfrmPedidoCliente
       'Order by data'
     )
     Params = <>
-    left = 64
-    top = 528
+    Left = 64
+    Top = 528
     object qryListaPedidosid: TLongintField
       FieldKind = fkData
       FieldName = 'id'
@@ -53871,7 +53160,7 @@ object frmPedidoCliente: TfrmPedidoCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryListaPedidosdata: TDateTimeField
       FieldKind = fkData
@@ -53880,7 +53169,7 @@ object frmPedidoCliente: TfrmPedidoCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryListaPedidoscliente: TLongintField
       FieldKind = fkData
@@ -53889,7 +53178,7 @@ object frmPedidoCliente: TfrmPedidoCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryListaPedidosnome: TStringField
       FieldKind = fkData
@@ -53957,8 +53246,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ReadOnly = False
       Required = False
       DisplayFormat = '#,0.00'
-      MaxValue = 0
-      MinValue = 0
       Precision = 2
     end
     object qryListaPedidosvstatus: TStringField
@@ -53993,8 +53280,8 @@ object frmPedidoCliente: TfrmPedidoCliente
   end
   object dsListaPedidos: TDataSource
     DataSet = qryListaPedidos
-    left = 64
-    top = 584
+    Left = 64
+    Top = 584
   end
   object updPedidoVenda: TZUpdateSQL
     DeleteSQL.Strings = (
@@ -54027,8 +53314,8 @@ object frmPedidoCliente: TfrmPedidoCliente
       '  pedido_venda.id = :OLD_id'
     )
     UseSequenceFieldForRefreshSQL = False
-    left = 120
-    top = 736
+    Left = 120
+    Top = 736
     ParamData = <    
       item
         DataType = ftUnknown
@@ -54104,8 +53391,8 @@ object frmPedidoCliente: TfrmPedidoCliente
         Name = 'id'
         ParamType = ptUnknown
       end>
-    left = 440
-    top = 680
+    Left = 440
+    Top = 680
     ParamData = <    
       item
         DataType = ftUnknown
@@ -54120,7 +53407,7 @@ object frmPedidoCliente: TfrmPedidoCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryCtaReceberid_nf: TLongintField
       DisplayWidth = 10
@@ -54193,8 +53480,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = 720898
     end
     object qryCtaReceberdesconto: TFloatField
@@ -54206,8 +53491,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = 720898
     end
     object qryCtaReceberjuros: TFloatField
@@ -54219,8 +53502,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = 720898
     end
     object qryCtaRecebervalor_pago: TFloatField
@@ -54232,8 +53513,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = 720898
     end
     object qryCtaReceberobservacao: TMemoField
@@ -54322,17 +53601,17 @@ object frmPedidoCliente: TfrmPedidoCliente
   end
   object dsCtaReceber: TDataSource
     DataSet = qryCtaReceber
-    left = 432
-    top = 760
+    Left = 432
+    Top = 760
   end
   object MainMenu1: TMainMenu
-    left = 147
-    top = 68
+    Left = 147
+    Top = 68
   end
   object dsRxMemoryData1: TDataSource
     DataSet = RxMemoryData1
-    left = 53
-    top = 723
+    Left = 53
+    Top = 723
   end
   object RxMemoryData1: TRxMemoryData
     FieldDefs = <    
@@ -54427,8 +53706,8 @@ object frmPedidoCliente: TfrmPedidoCliente
         Size = 80
       end>
     PacketRecords = 0
-    left = 60
-    top = 672
+    Left = 60
+    Top = 672
     object RxMemoryData1id: TLongintField
       FieldKind = fkData
       FieldName = 'id'
@@ -54464,8 +53743,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = -1
     end
     object RxMemoryData1preco_unitario: TFloatField
@@ -54476,8 +53753,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = -1
     end
     object RxMemoryData1desconto: TFloatField
@@ -54488,8 +53763,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = -1
     end
     object RxMemoryData1entregue: TBooleanField
@@ -54519,8 +53792,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = -1
     end
     object RxMemoryData1quant_estoque: TFloatField
@@ -54531,8 +53802,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = -1
     end
     object RxMemoryData1vlr_flex: TFloatField
@@ -54543,8 +53812,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = -1
     end
     object RxMemoryData1comissao: TFloatField
@@ -54555,8 +53822,6 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
       Precision = -1
     end
     object RxMemoryData1unidade: TStringField
@@ -54617,20 +53882,18 @@ object frmPedidoCliente: TfrmPedidoCliente
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      MaxValue = 0
-      MinValue = 0
     end
   end
   object ZSequence1: TZSequence
     Connection = dbConnect.ZConnection1
     SequenceName = 'pedido_venda_id_seq'
-    left = 228
-    top = 524
+    Left = 228
+    Top = 524
   end
   object ZSequence2: TZSequence
     Connection = dbConnect.ZConnection1
     SequenceName = 'pedido_venda_itens_id_seq'
-    left = 360
-    top = 528
+    Left = 360
+    Top = 528
   end
 end

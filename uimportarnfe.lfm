@@ -8,9 +8,9 @@ object frmImportarNFe: TfrmImportarNFe
   Caption = 'Importação de NFe'
   ClientHeight = 473
   ClientWidth = 640
-  OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '2.2.6.0'
+  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
   object Image1: TImage
     Left = 8
     Height = 74
@@ -97,8 +97,8 @@ object frmImportarNFe: TfrmImportarNFe
     Width = 184
     Caption = 'OK - Importar XML'
     Enabled = False
-    OnClick = btImportarClick
     TabOrder = 0
+    OnClick = btImportarClick
   end
   object ProgressBar1: TProgressBar
     Left = 17
@@ -113,8 +113,8 @@ object frmImportarNFe: TfrmImportarNFe
     Top = 430
     Width = 99
     Caption = 'Fechar'
-    OnClick = Button2Click
     TabOrder = 2
+    OnClick = Button2Click
   end
   object FileNameEdit1: TFileNameEdit
     Left = 147
@@ -405,7 +405,7 @@ object frmImportarNFe: TfrmImportarNFe
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object tbItensEntradanfentrada: TLongintField
       FieldKind = fkData
@@ -423,7 +423,7 @@ object frmImportarNFe: TfrmImportarNFe
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object tbItensEntradadescricao: TStringField
       FieldKind = fkData
@@ -512,7 +512,7 @@ object frmImportarNFe: TfrmImportarNFe
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 4
     end
     object tbItensEntradavalorunitario: TFloatField
@@ -522,7 +522,7 @@ object frmImportarNFe: TfrmImportarNFe
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Precision = 983044
     end
     object tbItensEntradavalortotal: TFloatField
@@ -921,7 +921,7 @@ object frmImportarNFe: TfrmImportarNFe
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryPreCtaPagarid_nf: TLongintField
       FieldKind = fkData
@@ -1065,7 +1065,7 @@ object frmImportarNFe: TfrmImportarNFe
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryPreCtaPagartotal_parcelas: TLongintField
       FieldKind = fkData
@@ -1074,7 +1074,7 @@ object frmImportarNFe: TfrmImportarNFe
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryPreCtaPagarfornecedor: TLongintField
       FieldKind = fkData
@@ -1116,7 +1116,7 @@ object frmImportarNFe: TfrmImportarNFe
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryFornecedornome: TStringField
       DisplayWidth = 320
@@ -1910,7 +1910,7 @@ object frmImportarNFe: TfrmImportarNFe
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryNFEntradanumeronf: TLongintField
       FieldKind = fkData
@@ -1919,7 +1919,7 @@ object frmImportarNFe: TfrmImportarNFe
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryNFEntradachave_nfe: TStringField
       FieldKind = fkData
@@ -1938,7 +1938,7 @@ object frmImportarNFe: TfrmImportarNFe
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryNFEntradafinalidade_nf: TLongintField
       FieldKind = fkData

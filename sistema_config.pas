@@ -928,7 +928,6 @@ begin
   ACBrNFe.Configuracoes.Geral.SSLLib               := libWinCrypt;
   ACBrNFe.Configuracoes.Geral.SSLXmlSignLib        := xsLibXml2;
   ACBrNFe.SSL.SSLType := LT_TLSv1_2;//TSSLType( 5 ); //LT_TLSv1_2
-
   //ACBrNFe.Configuracoes.Arquivos.IniServicos     := LeFileToString('C:\lazarus\Componentes_Laz\ACBrTrunk2\trunk2\Fontes\ACBrDFe\ACBrNFe\ACBrNFeServicos.ini');
   //ACBrNFe.Configuracoes.Certificados.DadosPFX    := ReadStrFromStream(stMem, stMem.Size);
   if Not EstaVazio(qry.FieldByName('path_certificado').AsString) then
@@ -950,6 +949,20 @@ begin
     ACBrNFe.DANFE.Logo := obtemPathSistemaNFe(tpsImagens) + ExecSql(dbConnect.ZConnection1,'Select nome||extensao From gestao_documentos Where tipo_dado=''LOGO_NFE'' Order by id Limit 1');
     ACBrNFe.DANFE.ExpandeLogoMarca:= True;
   end;
+
+  (* Responsável Técnico *)
+  if ACBrNFe.Configuracoes.WebServices.Ambiente = taProducao then
+  begin
+     //OE19VU0QZOIOP72WQ4JNO32GMIC4DU7SDEH6 02 Produção
+     ACBrNFe.Configuracoes.RespTec.IdCSRT:= 2;
+     ACBrNFe.Configuracoes.RespTec.CSRT  := 'OE19VU0QZOIOP72WQ4JNO32GMIC4DU7SDEH6';
+  end else
+  begin
+     //YTTA3481PIMON4CJ5Z2BBEVD7K3G31FDW6BX 01 Homologação
+     ACBrNFe.Configuracoes.RespTec.IdCSRT:= 1;
+     ACBrNFe.Configuracoes.RespTec.CSRT  := 'YTTA3481PIMON4CJ5Z2BBEVD7K3G31FDW6BX';
+  end;
+
   Result := qry;
 end;
 

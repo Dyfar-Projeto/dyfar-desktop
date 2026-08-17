@@ -6,9 +6,9 @@ object frmCadFornecedor: TfrmCadFornecedor
   Caption = 'Cadastro de fornecedores'
   ClientHeight = 605
   ClientWidth = 960
+  LCLVersion = '4.0.0.4'
   OnCreate = FormCreate
   OnResize = FormResize
-  LCLVersion = '3.0.0.3'
   object ExtendedNotebook1: TExtendedNotebook
     Left = 0
     Height = 555
@@ -17,11 +17,11 @@ object frmCadFornecedor: TfrmCadFornecedor
     ActivePage = TabSheet2
     Align = alClient
     MultiLine = True
+    Options = [nboShowCloseButtons, nboMultiLine]
     TabIndex = 0
     TabOrder = 0
     OnChange = ExtendedNotebook1Change
     OnResize = ExtendedNotebook1Resize
-    Options = [nboShowCloseButtons, nboMultiLine]
     object TabSheet2: TTabSheet
       Caption = 'Listagem de fornecedores'
       ClientHeight = 527
@@ -1580,7 +1580,7 @@ object frmCadFornecedor: TfrmCadFornecedor
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryFornecedorListanome: TStringField
       DisplayWidth = 320
@@ -1612,6 +1612,8 @@ object frmCadFornecedor: TfrmCadFornecedor
   end
   object ACBrCEP1: TACBrCEP
     ProxyPort = '8080'
+    ContentsEncodingCompress = []
+    NivelLog = 0
     WebService = wsRepublicaVirtual
     PesquisarIBGE = True
     Left = 74

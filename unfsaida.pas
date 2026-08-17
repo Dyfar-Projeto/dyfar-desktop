@@ -1204,6 +1204,7 @@ begin
   count := ExecSql(dbConnect.ZConnection1,'Select count(*) From pedido_venda_itens Where quant_estoque < 0 and pedido_venda=%s',[res]);
   if StrToIntDef(count,0) > 0 then
      Raise Exception.CreateFmt('NF-e não pode ser gerada, pedido %s tem itens com faltas. Verifique o pedido.',[res]);
+
   ExecSql(dbConnect.ZConnection1,'Begin Work');
   try
     id := CopiarPedidoParaNota( res );
@@ -2010,7 +2011,7 @@ begin
                 nf.NFe.Dest.IE          := qryNota.FieldByname('inscrestadual').AsString;
                 nf.NFe.Ide.indFinal     := cfNao;
              end;
-        2,3: Begin {Normal}
+      2,3: Begin {Normal}
                 nf.NFe.Dest.indIEDest   := inContribuinte;
                 nf.NFe.Dest.IE          := qryNota.FieldByname('inscrestadual').AsString;
                 nf.NFe.Ide.indFinal     := cfNao;
@@ -2069,6 +2070,15 @@ begin
      totVlrCBS  := 0.00;
      totVlrMun  := 0.00;
      While not qryItens.Eof do begin
+         ////////qryProd := ExecSqlQuery(dbConnect.ZConnection1,'SELECT p.*, pit.*, pit_pr.cbenef AS cbenef2, 9 AS motdesicms, '+
+         ////////                                             'p.c_class_trib, p.ibscbs_cst '+
+         ////////                                             'FROM produtos p '+
+         ////////                                             'LEFT JOIN produto_icms_template pit ON pit.produto = p.id AND pit.uf_destino = ''%s'' '+
+         ////////                                             'LEFT JOIN produto_icms_template pit_pr ON pit_pr.produto = p.id AND pit_pr.uf_destino = ''PR'' '+
+         ////////                                             'WHERE p.id = %d; ',
+         ////////                                             [UpperCase(qryNotauf.AsString) ,
+         ////////                                              qryItens.FieldByname('produto').AsInteger]);
+
          qryProd := ExecSqlQuery(dbConnect.ZConnection1,'Select p.*,pit.*, '+
                                                         '(Select cbenef From produto_icms_template Where produto=p.id and uf_destino=''PR'') AS cbenef2, '+
                                                         ' 9 as motdesicms, p.c_class_trib,p.ibscbs_cst '+
@@ -2077,7 +2087,7 @@ begin
                                                         'Where p.id=%d',
                                   [UpperCase(qryNotauf.AsString) ,
                                    qryItens.FieldByname('produto').AsInteger]);
-         itens := nf.NFe.Det.Add;
+         itens := nf.NFe.Det.New;
          itens.Prod.nItem := nItem;
          itens.Prod.cProd := AddChar('0',qryItens.FieldByname('produto').AsString,4);
          if Length(qryProd.FieldByName('codigo_barras').AsString) = 0 then

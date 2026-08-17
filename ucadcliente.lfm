@@ -6,11 +6,11 @@ object frmCadCliente: TfrmCadCliente
   Caption = 'Cadastro de clientes'
   ClientHeight = 624
   ClientWidth = 1112
+  LCLVersion = '4.0.0.4'
   OnClose = FormClose
   OnCreate = FormCreate
   OnResize = FormResize
   OnShortCut = FormShortCut
-  LCLVersion = '3.0.0.3'
   object PageControl1: TPageControl
     Left = 0
     Height = 574
@@ -18,10 +18,10 @@ object frmCadCliente: TfrmCadCliente
     Width = 1112
     ActivePage = TabSheet1
     Align = alClient
+    Options = [nboDoChangeOnSetIndex]
     TabIndex = 0
     TabOrder = 0
     OnChange = PageControl1Change
-    Options = [nboDoChangeOnSetIndex]
     object TabSheet1: TTabSheet
       Caption = 'Cadastro'
       ClientHeight = 546
@@ -900,7 +900,6 @@ object frmCadCliente: TfrmCadCliente
           FooterColor = clYellow
           Color = clWindow
           DrawFullLine = False
-          FocusColor = clRed
           SelectedColor = clHighlight
           DataSource = dsContatos
           Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -1057,7 +1056,6 @@ object frmCadCliente: TfrmCadCliente
           FooterColor = clYellow
           Color = clWindow
           DrawFullLine = False
-          FocusColor = clRed
           SelectedColor = clHighlight
           DataSource = dsRepresentantes
           Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -1648,9 +1646,9 @@ object frmCadCliente: TfrmCadCliente
             0000000000000000000000000000000000000000000000000000000000000000
             0000000000000000000000000000000000000000000000000000
           }
-          OnClick = btAddFotoClick
           ShowHint = True
           ParentShowHint = False
+          OnClick = btAddFotoClick
         end
         object btDelfoto: TSpeedButton
           Left = 400
@@ -1694,9 +1692,9 @@ object frmCadCliente: TfrmCadCliente
             0000000000000000000000000000000000000000000000000000000000000000
             0000000000000000000000000000000000000000000000000000
           }
-          OnClick = btDelfotoClick
           ShowHint = True
           ParentShowHint = False
+          OnClick = btDelfotoClick
         end
         object btSalvarImagem: TSpeedButton
           Left = 424
@@ -1740,9 +1738,9 @@ object frmCadCliente: TfrmCadCliente
             0000000000000000000000000000000000000000000000000000000000000000
             000000000000030303CF080808FF0D0D0DFF131313FF181818FF
           }
-          OnClick = btSalvarImagemClick
           ShowHint = True
           ParentShowHint = False
+          OnClick = btSalvarImagemClick
         end
         object RxDBGrid4: TRxDBGrid
           Left = 376
@@ -1845,7 +1843,6 @@ object frmCadCliente: TfrmCadCliente
           OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
           Color = clWindow
           DrawFullLine = False
-          FocusColor = clRed
           SelectedColor = clHighlight
           DataSource = dsDocumentos
           Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -1993,9 +1990,9 @@ object frmCadCliente: TfrmCadCliente
           Width = 1007
           ActivePage = TabSheet5
           Align = alClient
+          Options = [nboDoChangeOnSetIndex]
           TabIndex = 0
           TabOrder = 0
-          Options = [nboDoChangeOnSetIndex]
           object TabSheet5: TTabSheet
             Caption = 'Listagem de vendas'
             ClientHeight = 400
@@ -2196,7 +2193,6 @@ object frmCadCliente: TfrmCadCliente
               AlternateColor = clMoneyGreen
               Color = clWindow
               DrawFullLine = False
-              FocusColor = clRed
               SelectedColor = clHighlight
               DataSource = dsCtaCliente
               Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgRowHighlight]
@@ -2318,7 +2314,6 @@ object frmCadCliente: TfrmCadCliente
               AlternateColor = clMoneyGreen
               Color = clWindow
               DrawFullLine = False
-              FocusColor = clRed
               SelectedColor = clHighlight
               DataSource = dsProdutosCliente
               Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
@@ -2606,8 +2601,8 @@ object frmCadCliente: TfrmCadCliente
     object acLocalizar: TAction
       Caption = 'acLocalizar'
       ImageIndex = 4
-      OnExecute = acLocalizarExecute
       ShortCut = 113
+      OnExecute = acLocalizarExecute
     end
   end
   object qryClientes: TZQuery
@@ -2919,7 +2914,7 @@ object frmCadCliente: TfrmCadCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 80
     end
     object qryClientesvcliente_grupo: TStringField
@@ -2968,7 +2963,7 @@ object frmCadCliente: TfrmCadCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 320
     end
     object qryClientescnae: TStringField
@@ -3785,7 +3780,7 @@ object frmCadCliente: TfrmCadCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryProdutosbalcao_venda: TLongintField
       DisplayWidth = 10
@@ -3899,6 +3894,8 @@ object frmCadCliente: TfrmCadCliente
   end
   object ACBrCEP1: TACBrCEP
     ProxyPort = '8080'
+    ContentsEncodingCompress = []
+    NivelLog = 0
     WebService = wsViaCep
     PesquisarIBGE = True
     Left = 704
@@ -3936,7 +3933,7 @@ object frmCadCliente: TfrmCadCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryRepresentantesrepresentante: TLongintField
       FieldKind = fkData
@@ -3945,7 +3942,7 @@ object frmCadCliente: TfrmCadCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryRepresentantesdata_cadastro: TDateField
       FieldKind = fkData
@@ -4086,7 +4083,7 @@ object frmCadCliente: TfrmCadCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryCtaClienteid_nf: TLongintField
       FieldKind = fkData
@@ -4270,7 +4267,7 @@ object frmCadCliente: TfrmCadCliente
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 28
     end
   end

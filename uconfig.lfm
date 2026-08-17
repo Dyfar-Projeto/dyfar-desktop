@@ -7,10 +7,10 @@ object frmConfig: TfrmConfig
   Caption = 'Configurações'
   ClientHeight = 329
   ClientWidth = 538
-  OnCreate = FormCreate
   Position = poScreenCenter
   SessionProperties = 'cbxTipoImpressao.ItemIndex;ckbNaoImprimeTicket.Checked;edEmpresaPadrao.Text;edImpressoraTicket.Text;speMargemDireita.Value;speMargemEsquerda.Value;speMargemInferior.Value;speMargemSuperior.Value'
-  LCLVersion = '3.8.0.0'
+  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
   object Bevel1: TBevel
     Left = 0
     Height = 50
@@ -28,8 +28,8 @@ object frmConfig: TfrmConfig
     Default = True
     Kind = bkOK
     ModalResult = 1
-    OnClick = BitBtn1Click
     TabOrder = 0
+    OnClick = BitBtn1Click
   end
   object BitBtn2: TBitBtn
     Left = 452
@@ -49,9 +49,9 @@ object frmConfig: TfrmConfig
     Width = 538
     ActivePage = TabSheet1
     Align = alClient
+    Options = [nboDoChangeOnSetIndex]
     TabIndex = 0
     TabOrder = 2
-    Options = [nboDoChangeOnSetIndex]
     object TabSheet1: TTabSheet
       Caption = 'Configurações'
       ClientHeight = 251
@@ -80,9 +80,9 @@ object frmConfig: TfrmConfig
           ButtonWidth = 23
           MaxLength = 0
           NumGlyphs = 1
-          OnButtonClick = edEmpresaPadraoButtonClick
           PasswordChar = #0
           TabOrder = 0
+          OnButtonClick = edEmpresaPadraoButtonClick
         end
         object Label2: TLabel
           Left = 12
@@ -100,9 +100,9 @@ object frmConfig: TfrmConfig
           ButtonWidth = 23
           MaxLength = 0
           NumGlyphs = 1
-          OnButtonClick = edImpressoraTicketButtonClick
           PasswordChar = #0
           TabOrder = 1
+          OnButtonClick = edImpressoraTicketButtonClick
         end
         object ckbNaoImprimeTicket: TCheckBox
           Left = 14
@@ -318,6 +318,7 @@ object frmConfig: TfrmConfig
           Width = 95
           MaxLength = 0
           NumbersOnly = True
+          SpinButtonWidth = 17
           TabOrder = 0
           MinRepeatValue = 1
           NullValue = 0
@@ -330,6 +331,7 @@ object frmConfig: TfrmConfig
           Width = 95
           MaxLength = 0
           NumbersOnly = True
+          SpinButtonWidth = 17
           TabOrder = 1
           MinRepeatValue = 1
           NullValue = 0
@@ -342,6 +344,7 @@ object frmConfig: TfrmConfig
           Width = 95
           MaxLength = 0
           NumbersOnly = True
+          SpinButtonWidth = 17
           TabOrder = 2
           MinRepeatValue = 1
           NullValue = 0
@@ -354,6 +357,7 @@ object frmConfig: TfrmConfig
           Width = 95
           MaxLength = 0
           NumbersOnly = True
+          SpinButtonWidth = 17
           TabOrder = 3
           MinRepeatValue = 1
           NullValue = 0
@@ -390,7 +394,7 @@ object frmConfig: TfrmConfig
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryContingenciadatahora: TDateTimeField
       FieldKind = fkData
@@ -399,7 +403,7 @@ object frmConfig: TfrmConfig
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
     end
     object qryContingenciaregime: TLongintField
       FieldKind = fkData
@@ -427,7 +431,7 @@ object frmConfig: TfrmConfig
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
-      Required = false
+      Required = False
       Size = 80
     end
     object qryContingenciadescricao: TStringField

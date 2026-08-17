@@ -1,3 +1,12 @@
+Add-Type -AssemblyName System.Windows.Forms
+$resposta = [System.Windows.Forms.MessageBox]::Show("Deseja incluir as DLLs do runtime (C:\lib64)?", "Publicar Projeto", "YesNo", "Question")
+
+$dlls = @()
+if ($resposta -eq "Yes") {
+    Write-Host "Incluindo DLLs do runtime..."
+    $dlls = Get-ChildItem -Path "C:\lib64" -Filter "*.dll" -File | Select-Object -ExpandProperty FullName
+}
+
 $ErrorActionPreference = "Stop"
 
 $CURL = "C:\tools\curl.exe"
@@ -14,7 +23,8 @@ if (Test-Path "$projeto.zip") {
 }
 
 # Compacta (NATIVO do Windows)
-Compress-Archive -Path "$projeto.exe" -DestinationPath "$projeto.zip"
+#Compress-Archive -Path "$projeto.exe" -DestinationPath "$projeto.zip"
+Compress-Archive -Path (@(".\$projeto.exe") + $dlls) -DestinationPath "$projeto.zip" -Force
 
 # Lê versão do XML (CORRETO, sem gambiarra)
 [xml]$xml = Get-Content "versao.xml"
